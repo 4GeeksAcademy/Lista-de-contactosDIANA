@@ -1,17 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Home from './views/Home'
-import AddContact from './views/AddContact'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import UpDateContact from './views/UpDateContact'
+import Home from './views/Home';
+import AddContact from './views/AddContact';
+import UpDateContact from './views/UpDateContact';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ContactProvider } from './store/appContext';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <ContactProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,8 +14,8 @@ function App() {
           <Route path="/updatecontact/:idContact" element={<UpDateContact />} />
         </Routes>
       </BrowserRouter>
-    </>
-  )
+    </ContactProvider>
+  );
 }
 
-export default App
+export default App;

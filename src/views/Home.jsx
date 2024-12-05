@@ -10,7 +10,7 @@ const Home = () => {
     const { contact, handleGetContacts } = useContext(ContactContext)
 
     const [idDelete, setIdDelete] = useState(null)
-    //useEffect(() => {setIdDelete(contactoId)}, [contactoId])
+ 
 
     
     const handleDelete = async () => {

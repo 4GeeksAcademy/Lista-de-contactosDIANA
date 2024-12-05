@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Modal from "./Modal";
 
 const ContactCard = ({ name, address, phone, email, onUpDate, idDeleteSelect }) => {
 
